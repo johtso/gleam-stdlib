@@ -735,17 +735,17 @@ fn do_find_map(
 /// ## Examples
 ///
 /// ```gleam
-/// find_map(from_list([1, 2, 3]), first)
+/// find_map(from_list([1, 2, 3]), fn(a) {Ok(a)})
 /// // -> Ok(1)
 /// ```
 ///
 /// ```gleam
-/// find_map(from_list([]), first)
+/// find_map(from_list([]), fn(a) {Ok(a)})
 /// // -> Error(Nil)
 /// ```
 ///
 /// ```gleam
-/// find(empty(), first)
+/// find(empty(), fn(a) {Ok(a)})
 /// // -> Error(Nil)
 /// ```
 ///
